@@ -1,0 +1,11 @@
+  Life Circle:
+  |
+  |
+  |
+  |____index.html
+  |	
+  |_______main.css
+  |
+  |____________script.js
+
+
