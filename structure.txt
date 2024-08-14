@@ -1,11 +1,14 @@
-  Life Circle:
-  |
-  |
-  |
-  |____index.html
-  |	
-  |_______main.css
-  |
-  |____________script.js
+ Life Circle of,
+ Project Structure:
 
+ /Space-Travel
+ |
+ |
+ |_____index.html - 1
+ |
+ |________main.css - 2
+ |
+ |____________script.js - 3
+ |
+ |_____index-out.html - 3.1
 

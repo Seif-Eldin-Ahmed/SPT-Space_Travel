@@ -4,65 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="describing project overview">
-    <title>Space-Travel Web App</title>
-    <link rel="stylesheet" href="main.css" /> 
-    <link rel="icon" href="assets/ST-Logo.png" /> 
+    <title>Space-Travel Web App</title>  <!-- the name of document in browser -->
+    <link rel="stylesheet" href="main.css" />  <!-- to link it with the main file of type of "CSS" to active the "CSS" in the code -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend">  <!-- to add any type of fonts from "Google Fonts" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space Grotesk">
+    <link rel="icon" href="assets/SPT-Logo.png" />  <!-- icon source page -->
 
   </head>
+
   <body>
 
-    <div class="container"> 
-    
-        <h1>Engineer Space Trip Registration</h1>
-        <form id="registration-form">
+    <div class="logo">  <!-- Logo brand in the home page -->
+      <img src="assets/SPT-Logo.png">
+      <h3>SPT</h3>
+    </div>
 
-            <label>Full Name:</label>
-            <input type="text" id="name" class="name" name="name" required placeholder="Enter your name">
+    <div class="container"> <!-- Form -->
 
-            <label>Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <h1>Engineer Space Trip Registration</h1>  <!-- main heading of the form -->
 
-            <label for="" class="nationality-label">Nationality:</label>
+        <form action="https://sheetdb.io/api/v1/em57t1w4ww00q" method="POST" id="sheetdb-form" onsubmit="myfunc(event)">  <!-- receive the link to access to send data of the form to the "Google Sheets" -->
+          
+            <label for=""> Full Name: </label>       <!-- (data[....]) > to link the data of the form with the fields of the google sheet -->
+            <input type="text" class="name" id="name" name="data[Full Name]" placeholder="Enter your name" required>
 
-            <select name="" id="" class="options">
+            <label for=""> Email: </label>
+            <input type="email" id="email" name="data[Email]" placeholder="Enter your email" required>
 
-                <option value="" disabled selected>Select your specialization</option>    
-                <option value="Egypt">Egypt</option>
+            <label for="" class="nationality-label"> Nationality: </label>
+            <select onfocus="this.size=5;" onblur="this.size=0;" onchange="this.size=1; this.blur()" 
+             class="options" id="nationality" name="data[Nationality]">  <!-- to customize and change of the color, size, and the animation of the select choices of select field -->
+
+                <option value="" disabled selected>Select your specialization</option>  <!-- only to read (Just a hint) not to choose -->  
+                <option value="Egypt">Egypt</option>  <!-- set the values of the choices in the select field -->
                 <option value="USA">USA</option>
-                <option value="UK">USA</option>
+                <option value="UK">UK</option>
                 <option value="Canada">Canada</option>
-
             </select>
 
-            <label for="" class="experience-label"> Experience LvL: </label>
 
-            <div class="radio-group">
-                <label for="">Junior</label>
-                <input type="radio" id="Junior" name="experience" value="Junior">
-
-                <label for="">Mid</label>
-                <input type="radio" id="mid" name="experience" value="Mid">
-
-                <label for="">Senior</label>
-                <input type="radio" id="senior" name="experience" value="Senior">
+            <!-- gender section -->
+            <label for="" class="gender-label"> Gender: </label>  
+            <div class="gRadio-group">
+              <label for="" > Male </label>
+              <input type="radio" id="gender" name="data[Gender]" value="Male"> 
+              
+              <label for="" > Female </label>
+              <input type="radio" name="data[Gender]" value="Female">
             </div>
 
-            <label for="">Why do you want to explore space?</label>
 
-            <textarea name="" id="motivational-q" name="motivational-q" rows="10" cols="20" placeholder="Please answer the question!"></textarea>
+            <!-- experience lvl section -->
+            <label for="" class="experience-label"> Experience LvL: </label>
+            <div class="eRadio-group">
+              <label for=""> Junior </label>
+              <input type="radio" id="Junior" name="data[Experience LvL]" value="Junior">
 
-                <div  class="checkbox-group">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">I consent to agree to publish my data stored for this project</label>
-                </div>
+              <label for=""> Mid </label>
+              <input type="radio" id="Mid" name="data[Experience LvL]" value="Mid">
+
+              <label for=""> Senior </label>
+              <input type="radio" id="Senior" name="data[Experience LvL]" value="Senior">
+            </div>
+
+            <!-- motivational question in the form -->
+            <label for=""> Why do you want to explore space? </label>
+            <textarea id="motivational_q" name="data[Motivational Question.?]" rows="10" cols="20" placeholder="Please answer the question!"></textarea>
 
 
+            <div class="checkbox-group">
+              <input type="checkbox" id="consent" name="" required>
+              <label for="">I consent to agree to publish my data stored for this project</label>
+            </div>
+                
             <button type="submit">Submit Registration</button>
-
         </form>
     </div>
-    
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>  <!-- to link it with the script file of type of "Java Script" to active the "JS" in the code -->
   </body>
 </html>

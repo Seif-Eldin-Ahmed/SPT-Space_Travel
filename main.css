@@ -1,35 +1,63 @@
+/* edit the body background and the content in it */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #030637;
+    background: url(assets/galaxy-bg.jpg) no-repeat;
+    background-size: cover;
     color: #ffffff;
     margin: 0;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 150vh;
 }
 
+/* set the size and fit the logo brand to the page */
+.logo img {
+    width: 100%;
+    height: 100%;
+    width: 70px;
+    height: auto;
+    margin-top: -548px;
+    margin-bottom: 850px;
+    margin-right: 399px;
+    object-fit: cover;
+}
+.logo h3 {
+    margin-left: 66px;
+    margin-top: -900px;
+}
+
+/* style the size, color, style, and effect on form */
 .container {
-    background-color: #3C0753;
-    padding: 20px;
-    margin-top: 3%;
+    background-color: transparent;
+    padding: 45px;
+    margin-top: 10%;
+    margin-right: 32%;
+    margin-bottom: 120px;
+    border: 1.5px solid #ffffff5e;
     border-radius: 10px;
-    box-shadow: 0 0 15px #000105;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
     max-width: 400px;
     width: 100%;
 }
 
+/* customize and style the heading form */
 h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: #FB773C;
+    font-family: Lexend;
+    color: #da56fb; 
+
+    
 }
 
 /* Style the registration form */
 form {
     display: flex;
     flex-direction: column;
+    color: #ffffffd1;
 }
 
 label {
@@ -41,46 +69,101 @@ label {
     margin-top: 10px;
 }
 
+    /* to active the color animation when the mouse get on choice in select field */
+    option:nth-child(2):hover {
+        background: #ffc519; 
+    }
+    option:nth-child(3):hover {
+        background: #ffc519;
+    }
+    option:nth-child(4):hover {
+        background: #ffc519;
+    }
+    option:nth-child(5):hover {
+        background: #ffc519;
+    }
+
+.gender-label {
+   margin-top: 10px; 
+ }    
+
 .experience-label {
     margin-top: 10px;
 }
 
+
 input, select, textarea {
     margin-bottom: 15px;
     padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #290439;
-    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #ffffff5e;
+    background-color: transparent;
+    color: #ffffffdd;
 }
 
-input[type="radio"] {
-    margin-right: 10px;
+select {
+    background-color: #ffffff00;
 }
 
-.radio-group {
+::placeholder{
+    color: #ffffffdd;
+}
+
+
+.gRadio-group {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 45px;
+
+    input[type="radio"]{
+        accent-color: #ffc519; 
+        margin-right: 65px;
+    }
+}
+.eRadio-group {
     display: flex;
     justify-content: space-around;
     margin-bottom: 15px;
+    margin-left: 45px;
+
+    input[type="radio"]{
+        accent-color: #ffc519; 
+        margin-right: 65px;
+    }
 }
-
-
 .checkbox-group {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 20px;
+
+    input[type="checkbox"]{
+        accent-color: #ffc519;
+        margin-top: -9px;
+        margin-right: 4.5px;
+    }  
 }
 
 button {
     padding: 10px;
-    background-color: #fb783cf0;
+    background-color: #ffd65c;  
     border: none;
-    color: #ffffff;
+    color: #1b1957;
     border-radius: 10px;
     cursor: pointer;
+    font-family: Space Grotesk;
     font-size: 16px;
+    font-weight: bold;
 }
 
+/* animate the button when mouse get on */
 button:hover {
-    background-color: #ff590c;
+    background-color: #ffc519;   
 }
+
+.text {
+    margin-top: 1100px;
+    margin-right: -00px;
+    display: inline;
+}
+
