@@ -98,11 +98,12 @@ input, select, textarea {
     color: #ffffffdd;
 }
 
+/* To set font color of placeholder in the buttons */
 ::placeholder{
     color: #ffffffdd;
 }
 
-
+/* Gender section */
 .gRadio-group {
     display: flex;
     margin-bottom: 10px;
@@ -113,6 +114,7 @@ input, select, textarea {
         margin-right: 65px;
     }
 }
+/* Experience LvL section */
 .eRadio-group {
     display: flex;
     justify-content: space-around;

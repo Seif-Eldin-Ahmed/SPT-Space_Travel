@@ -1,6 +1,6 @@
 function myfunc(event) {
     event.preventDefault();
-
+    
     // calling the data of the form and set them to variables
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
@@ -31,7 +31,7 @@ function myfunc(event) {
 var form = document.getElementById('sheetdb-form');
   form.addEventListener("submit", e => {    // Setting a function that will be called whenever the specified data is delivered to the target 
     e.preventDefault();    // if something wrong happens in the fill the form, default action should not be taken
-    fetch(form.action, {    // to send a request to the Web API URL and get a response. 
+    fetch(form.action, {    // to send a request to the Web API URL and get a response
         method : "POST",
         body: new FormData(document.getElementById("sheetdb-form")),
     }).then(    // if the process is correct and clean from any error, do next...
