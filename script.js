@@ -18,7 +18,7 @@ function myfunc(event) {
     localStorage.setItem('ls_gender', gender);
 
     document.getElementsByName('data[Experience LvL]')
-    .forEach(radio => {
+    .forEach(radio => {   // Calls a function for each element in radio
         if (radio.checked) {
             localStorage.setItem('ls_experience_lvl', radio.value);
         }
@@ -29,13 +29,13 @@ function myfunc(event) {
 
 // to call the id of the form and, link the data of the value of the form to the google sheet which we created
 var form = document.getElementById('sheetdb-form');
-  form.addEventListener("submit", e => {    // to call the submit button of the form and give it the orders 
-    e.preventDefault();    // access the data
-    fetch(form.action, {    // to catch the form data (code) and activating it 
+  form.addEventListener("submit", e => {    // Setting a function that will be called whenever the specified data is delivered to the target 
+    e.preventDefault();    // if something wrong happens in the fill the form, default action should not be taken
+    fetch(form.action, {    // to send a request to the Web API URL and get a response. 
         method : "POST",
         body: new FormData(document.getElementById("sheetdb-form")),
-    }).then(    // to do next
-        response => response.json()   // active the data and send them 
+    }).then(    // if the process is correct and clean from any error, do next...
+        response => response.json()   // processes the response data from a web request. It reads all the data and then converts it into a JavaScript object
     ).then((html) => {    // to call the "html" files direction 
       // you can put any JS code here
       window.open('index-out.html', '_blank');  // to open new window and display other information
